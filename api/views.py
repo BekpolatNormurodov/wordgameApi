@@ -370,4 +370,9 @@ class HangmanAPIView(APIView):
             "word": random.choice(tecnology),
         }
 
-        return Response([lvl_1, lvl_2, lvl_3]) 
+        summ = [lvl_1, lvl_2, lvl_3]
+
+        # ID qo‘shish
+        data = [{"id": i + 1, **item} for i, item in enumerate(summ)]
+
+        return Response(data) 
