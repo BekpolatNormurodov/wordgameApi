@@ -369,8 +369,8 @@ class HangmanAPIView(APIView):
             "category": "Texnologiya",
             "word": random.choice(tecnology),
         }
-
-        summ = [lvl_1, lvl_2, lvl_3]
+ 
+        summ = [lvl_1, lvl_2, lvl_3, lvl_4, lvl_5, lvl_6, lvl_7, lvl_8, lvl_9, lvl_10, lvl_11, lvl_12, lvl_13, lvl_14, lvl_15, lvl_16, lvl_17, lvl_18, lvl_19, lvl_20, lvl_21, lvl_22, lvl_23, lvl_24, lvl_25, lvl_26, lvl_27, lvl_28, lvl_29, lvl_30, lvl_31, lvl_32, lvl_33, lvl_34, lvl_35, lvl_36, lvl_37, lvl_38, lvl_39, lvl_40, lvl_41, lvl_42, lvl_43, lvl_44, lvl_45, lvl_46, lvl_47, lvl_48, lvl_49, lvl_50, lvl_51, lvl_52, lvl_53, lvl_54, lvl_55, lvl_56, lvl_57, lvl_58, lvl_59, lvl_60]
 
         # ID qo‘shish
         data = [{"id": i + 1, **item} for i, item in enumerate(summ)]
