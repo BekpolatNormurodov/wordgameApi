@@ -2,7 +2,6 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 import random
 
-
 class HangmanAPIView(APIView):
     def get(self, request):
         names = "Abbos", "Abdulaziz", "Abdulloh", "Abror", "Adham", "Akbar", "Akmal", "Alisher", "Amir", "Amirbek", "Amirxon", "Anvar", "Asad", "Asliddin", "Asror", "Azamat", "Azimjon", "Aziz", "Azizbek", "Baxtiyor", "Bekmurod", "Bekzod", "Bilol", "Bobur", "Botir", "Davron", "Dilshod", "Elyor", "Ergash", "Erkin", "Farruh", "Farrux", "Farhod", "Fayzulla", "Firdavs", "Habib", "Habibulloh", "Hakim", "Hamid", "Hamza", "Hasan", "Hasanboy", "Hikmat", "Hikmatulloh", "Hojiakbar", "Humoyun", "Husan", "Husanboy", "Husniddin", "Ilhom", "Iskandar", "Islom", "Ismoil", "Ibrohim", "Jamol", "Jamshid", "Jaloliddin", "Jasur", "Javlon", "Javohir", "Karim", "Kamoliddin", "Komil", "Laziz", "Lochin", "Lutfulla", "Madamin", "Mahmud", "Malik", "Mansur", "Mashrab", "Mirjalol", "Mirkomil", "Mironshoh", "Murod", "Muhriddin", "Muhammad", "Muzaffar", "Najmiddin", "Nodir", "Nurbek", "Nuriddin", "Odil", "Olim", "Oybek", "Qahhor", "Qahramon", "Qobil", "Qodir", "Qosim", "Qurbon", "Quvonch", "Rahim", "Rashid", "Ravshan", "Rustam", "Rustamjon", "Samandar", "Sanjar", "Sardor", "Sarvar", "Said", "Shahboz", "Shahriyor", "Shahzod", "Shams", "Shamsiddin", "Shavkat", "Sherali", "Sherzod", "Shodiyor", "Shodmon", "Shokir", "Shohjahon", "Shohruh", "Siroj", "Sirojiddin", "Sobir", "Sobit", "Sodiq", "Sohib", "Suhrob", "Sulton", "Temur", "Tohir", "Tolib", "Ubaydulla", "Ubaydulloh", "Ulug'bek", "Umid", "Umar", "Usmon", "Valijon", "Vohid", "Xayrulloh", "Xojiakbar", "Xolmat", "Xudoyor", "Xurshid", "Yahyo", "Yodgor", "Yoqub", "Yunus", "Yusuf", "Zafar", "Zavqiddin", "Zayniddin", "Zohid", "Zokir", "Adolat", "Aziza", "Barno", "Dilafruz", "Dildora", "Dilnoza", "Feruza", "Fotima", "Gulbahor", "Gulchehra", "Gulhayo", "Gulnora", "Gulnoza", "Gulsanam", "Gulshan", "Gulruh", "Humora", "Husniya", "Iroda", "Kamola", "Kumush", "Lobar", "Malohat", "Manzura", "Mashhura", "Maftuna", "Mehribon", "Muhayyo", "Mubina", "Mukarram", "Muqaddas", "Munira", "Munisa", "Mushtariy", "Nilufar", "Nigora", "Nodira", "Nozima", "Ozoda", "Oysara", "Oygul", "Parizoda", "Rano", "Rayhona", "Ruxshona", "Saida", "Saodat", "Sanobar", "Shahlo", "Shahzoda", "Shamsiya", "Shoira", "Shukrona", "Surayyo", "Umida", "Xadicha", "Xalima", "Xilola", "Xosiyat", "Xurriyat", "Zarnigor", "Zebo", "Zilola", "Ziyoda", "Zuhra", "Madina", "Mahliyo", "Malika", "Mehriniso", "Muslima", "Nasiba", "Nafisa", "Nafosat", "Nargiza", "Nigina", "Robiya", "Sabina", "Sanam", "Shahrizoda", "Sitora", "Sadoqat", "Sohiba", "Tahmina", "Tomaris", "Zaynab", "Zulfiya", "Zarina", "Zarifa", "Asal", "Barchinoy", "Dilorom", "Dilshoda", "Firuza", "Gulandon", "Gulsara", "Halima", "Hanifa", "Husnora", "Jamila", "Karima", "Komila", "Lola", "Marhabo", "Munavvar", "Oysuluv", "Rano", "Sabohat", "Shirin", "Shohista", "Xonzoda", "Xurshida", "Zebiniso", "Dilnora", "Guljahon", "Guljamol", "Husniyo", "Iymona", "Latofat", "Nigoh", "Ruxsora", "Sabrina", "Shaxnoza", "Shodiyona", "Shohsanam", "Umriniso", "Xumora", "Zubayda", "Zulayho"
@@ -375,4 +374,111 @@ class HangmanAPIView(APIView):
         # ID qo‘shish
         data = [{"id": i + 1, **item} for i, item in enumerate(summ)]
 
-        return Response(data) 
+        return Response(data)
+    
+
+class CrosswordAPIView(APIView):
+    def get(self, request):
+        data = [
+            {
+                "level": 1,
+                "letters": ["B","O","L","A"],
+                "words": ["BOL","LAB","OLO"]
+            },
+            {
+                "level": 2,
+                "letters": ["K","U","T","I","B"],
+                "words": ["KITOB","BUT","TIB"]
+            },
+            {
+                "level": 3,
+                "letters": ["S","O","N","I","Y"],
+                "words": ["SON","SINO","YON"]
+            },
+            {
+                "level": 4,
+                "letters": ["D","A","R","S","T"],
+                "words": ["DARS","STAR","DRAS"]
+            },
+            {
+                "level": 5,
+                "letters": ["Q","I","L","O","M"],
+                "words": ["QIL","QILOM","MOL"]
+            },
+            {
+                "level": 6,
+                "letters": ["O","T","I","S","H"],
+                "words": ["OTISH","HITS","TOSH"]
+            },
+            {
+                "level": 7,
+                "letters": ["Y","U","G","U","R","T"],
+                "words": ["YUGURT","GURU","TUGU"]
+            },
+            {
+                "level": 8,
+                "letters": ["F","A","R","M","O","N"],
+                "words": ["FARMO","RAMON","MON"]
+            },
+            {
+                "level": 9,
+                "letters": ["X","I","S","O","B"],
+                "words": ["XISOB","BOSH","SHOX"]
+            },
+            {
+                "level": 10,
+                "letters": ["S","A","H","O","B","I"],
+                "words": ["SAHOBI","HIBA","OBI"]
+            }
+        ]
+ 
+        return Response(data)
+
+
+class CrosswordAPIView(APIView):
+    def get(self, request):
+        data = [
+            {
+                "level": 1,
+                "words": ["CAT", "DOG", "BIRD", "FISH"]
+            },
+            {
+                "level": 2,
+                "words": ["APPLE", "PEAR", "PLUM", "MANGO", "GRAPE"]
+            },
+            {
+                "level": 3,
+                "words": ["RED", "BLUE", "GREEN", "YELLOW", "PINK"]
+            },
+            {
+                "level": 4,
+                "words": ["CAR", "BUS", "TRAIN", "PLANE", "BIKE"]
+            },
+            {
+                "level": 5,
+                "words": ["JAVA", "DART", "FLUTTER", "KOTLIN", "PYTHON"]
+            },
+            {
+                "level": 6,
+                "words": ["EARTH", "MARS", "VENUS", "JUPITER", "PLUTO"]
+            },
+            {
+                "level": 7,
+                "words": ["BOOK", "PEN", "PAPER", "BAG", "CHAIR"]
+            },
+            {
+                "level": 8,
+                "words": ["MUSIC", "DANCE", "PAINT", "MOVIE", "DRAMA"]
+            },
+            {
+                "level": 9,
+                "words": ["TASHKENT", "LONDON", "PARIS", "TOKYO", "BERLIN"]
+            },
+            {
+                "level": 10,
+                "words": ["UZBEKISTAN", "KAZAKHSTAN", "KYRGYZSTAN", "TAJIKISTAN", "TURKMENISTAN"]
+            }
+        ]
+
+ 
+        return Response(data)
